@@ -39,16 +39,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            //this.transform.position += Camera.main.transform.forward * speed * Time.deltaTime;
             Vector3 move1 = Camera.main.transform.forward;
             controller.Move(move1 * speed * Time.deltaTime);
-
         }
         else if (Input.GetKey(KeyCode.R))
         {
             controller.Move(move * sprint * Time.deltaTime);
 
-        } else
+        } 
+        else
         {
             controller.Move(move * speed * Time.deltaTime);
         }
